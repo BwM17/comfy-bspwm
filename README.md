@@ -3,7 +3,7 @@
 # [WIP] comfy bspwm rice
 
 
-![[https://github.com/PixelLotus/comfy-bspwm/blob/main/src/Rice.png]] 
+![Picture](https://github.com/PixelLotus/comfy-bspwm/blob/main/src/Rice.png)
 
 ###  TODOs
 ***
