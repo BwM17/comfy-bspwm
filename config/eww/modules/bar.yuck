@@ -1,0 +1,88 @@
+
+
+(defwidget bar []
+    (centerbox
+        :space-evenly true
+        (left)
+        (player)
+        (right)
+    )
+)
+
+(defwidget workspace []
+    (box
+        :class "workspace-outer"
+        (literal 
+            :content workspaces
+        )
+    )
+)
+
+(defwidget left []
+    (box 
+        :class "left"
+        :space-evenly false
+        :hexpand false 
+        :vexpand false
+        (launcher_left)
+        (workspace)
+    )
+
+)
+
+(defwidget right []
+    (box 
+        :class "right"
+        :halign "end"
+        :space-evenly false
+        :hexpand false 
+        :vexpand false 
+        (mygraph
+            :onhover "${eww} update cpu_reveal=true"
+            :onhoverlost "${eww} update cpu_reveal=false" 
+            :icon-class "Cpu-icon"
+            :icon ""
+            :percentage "${round(EWW_CPU.avg, 0)}%" 
+            :reveal cpu_reveal
+            :graph-value {EWW_CPU.avg}
+        
+        )
+        (mygraph
+            :onhover "${eww} update ram_reveal=true"
+            :onhoverlost "${eww} update ram_reveal=false" 
+            :icon-class "Ram-icon"
+            :icon "󰆼"
+            :percentage "${round(EWW_RAM.used_mem_perc, 0)}%" 
+            :reveal ram_reveal
+            :graph-value {EWW_RAM.used_mem_perc}
+        
+        )
+        (slider)
+        (right_outer)
+    )
+)
+
+
+(defwidget right_outer []
+    (box 
+        :space-evenly false 
+        :class "right_outer"
+        :vexpand false 
+        :valign "center"
+        (time)
+        (power)
+        (box 
+            :class "settings"
+            :space-evenly false 
+            :vexpand false
+            (eventbox 
+                :cursor "pointer"
+                (button 
+                    :onclick "notify-send 'settings'"
+                    " "
+                )
+            )
+        
+        )
+    )
+)

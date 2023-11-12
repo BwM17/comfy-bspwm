@@ -1,0 +1,17 @@
+
+; Listener 
+(deflisten workspaces "scripts/workspace")
+
+
+; polls 
+(defpoll time :interval "1s" "date '+%H:%M'")
+(defpoll vol :interval "1s" "scripts/getvol")
+(defpoll title :interval "1s" "scripts/player --title")
+(defpoll player-icon :interval "1s" "scripts/player --icon")
+
+;vars 
+(defvar eww "/usr/bin/eww -c $HOME/.config/eww ")
+(defvar pow_reveal false)
+(defvar ram_reveal false)
+(defvar cpu_reveal false)
+(defvar title_reveal false)
