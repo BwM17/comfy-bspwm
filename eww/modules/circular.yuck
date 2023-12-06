@@ -1,0 +1,17 @@
+
+
+(defwidget circular [outer tooltip inner thickness value]    
+    (box  
+        :vexpand false
+        :hexpand false 
+        :class outer 
+        :tooltip tooltip 
+            (circular-progress 
+                :calss inner
+                :thickness thickness
+                :value value 
+            )
+        )
+    ) 
+    
+    

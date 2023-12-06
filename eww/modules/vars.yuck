@@ -1,0 +1,21 @@
+
+; Listener 
+(deflisten workspaces "scripts/workspace")
+
+
+; polls 
+(defpoll time :interval "1s" "date '+%H:%M'")
+(defpoll vol :interval "1s" "scripts/getvol")
+(defpoll title :interval "1s" "scripts/player --title")
+(defpoll player-icon :interval "1s" "scripts/player --icon")
+(defpoll bat :interval "4s" "acpi -b | grep -oP '\\d+%' | tr -d '%'")
+(defpoll bright :interval "1s" "brightnessctl i  | sed -n 2p | awk '{print $4}' | awk '{print substr($0, 2, length($0) - 3)}'")
+
+
+
+;vars  
+(defvar eww "/run/current-system/sw/bin/eww -c $HOME/.config/eww ")
+(defvar pow_reveal false)
+(defvar ram_reveal false)
+(defvar cpu_reveal false)
+(defvar title_reveal false)

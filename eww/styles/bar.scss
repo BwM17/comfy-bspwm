@@ -1,0 +1,55 @@
+//Bar
+
+.logo_launcher{   
+    color: $Background;
+    margin-left: 15px;
+    padding: 0.2rem 0.5rem;   
+    font-size: 28px; 
+    border-radius: 50px; 
+    background-color: lightblue; 
+}
+
+.works{ 
+    margin-left: 10px;   
+    background-color: $Background-Alt;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px; 
+    
+}
+
+.workspace-focused, .workspace-occupied{
+    font-size: 26px;
+}
+
+.workspace-occupied{
+    color: #bbdfd9
+}
+
+.workspace-empty{
+    color: #999999;
+    font-size: 26px; 
+}
+
+.workspace-focused:hover, .workspace-occupied:hover, .workspace-empty:hover{
+    font-size: 20px;
+}  
+
+.batbar{
+    color: $Lightblue;
+}
+
+.batbar{ 
+    color: $Lightblue;
+}  
+
+
+
+
+
+
+
+
+
+
+
+

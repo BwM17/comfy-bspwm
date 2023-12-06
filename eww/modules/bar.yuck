@@ -1,0 +1,56 @@
+
+
+(defwidget bar []
+    (centerbox
+        (left)   
+        (player) 
+        (right)
+    )
+)
+
+
+(defwidget workspace []
+    (box 
+        :space-evenly false
+        :class "workspace-outer"
+        (literal 
+            :content workspaces
+        )
+    )
+)  
+
+
+
+(defwidget left []
+    (box 
+        :class "left"
+        :space-evenly false
+        :hexpand false 
+        :vexpand false
+            (launcher
+                :class "logo_launcher"  
+                :onclick "" 
+                :icon "  " 
+            )
+            (workspace)
+    )
+) 
+
+
+(defwidget right [] 
+    (box  
+        :class "right"
+        :space-evenly false 
+        :halign "end" 
+        :orentation "h"
+            (power)
+            (time)
+            (circular
+                :outer "bat_outer" 
+                :tooltip "Battery: ${bat}%" 
+                :inner "batbar" 
+                :thickness 5
+                :value bat 
+            )  
+    )
+)
