@@ -34,22 +34,13 @@
     font-size: 20px;
 }  
 
-.batbar{
-    color: $Lightblue;
+.inner{
+    margin-top: 10px; 
+    margin-bottom: 10px; 
 }
 
-.batbar{ 
-    color: $Lightblue;
-}  
 
 
-
-
-
-
-
-
-
-
-
-
+.inner progress{
+    background-color: rebeccapurple;
+}

@@ -1,7 +1,8 @@
 
 
 (defwidget bar []
-    (centerbox
+    (centerbox 
+        :space-evenly false
         (left)   
         (player) 
         (right)
@@ -38,19 +39,17 @@
 
 
 (defwidget right [] 
-    (box  
-        :class "right"
-        :space-evenly false 
-        :halign "end" 
-        :orentation "h"
-            (power)
-            (time)
-            (circular
-                :outer "bat_outer" 
-                :tooltip "Battery: ${bat}%" 
-                :inner "batbar" 
-                :thickness 5
-                :value bat 
-            )  
+    (box   
+        :halign "end"
+        :space-evenly false
+        (time) 
+        (power) 
+        (circular-progress   
+                :tooltip "${vol}"
+                :class "inner"
+                :thickness 15
+                :value vol
+        ) 
     )
-)
+) 
+

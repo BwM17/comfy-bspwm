@@ -23,7 +23,7 @@
 
 
 (defwidget launcher[class onclick icon]     
-    (box 
+    (box  
         :orientation "h" 
         :class class
         :halign "center"

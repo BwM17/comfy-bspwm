@@ -5,7 +5,7 @@
 
 ; polls 
 (defpoll time :interval "1s" "date '+%H:%M'")
-(defpoll vol :interval "1s" "scripts/getvol")
+(defpoll vol :interval "1s" "amixer get Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
 (defpoll title :interval "1s" "scripts/player --title")
 (defpoll player-icon :interval "1s" "scripts/player --icon")
 (defpoll bat :interval "4s" "acpi -b | grep -oP '\\d+%' | tr -d '%'")
@@ -14,8 +14,8 @@
 
 
 ;vars  
-(defvar eww "/run/current-system/sw/bin/eww -c $HOME/.config/eww ")
-(defvar pow_reveal false)
+(defvar eww "/usr/bin/eww -c $HOME/.config/eww ")
+(defvar pow_reveal false) 
 (defvar ram_reveal false)
 (defvar cpu_reveal false)
 (defvar title_reveal false)

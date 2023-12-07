@@ -7,8 +7,9 @@
 } 
 
 
-.light{
-    background-color: $Lightblue; 
+.light, .vol{ 
+    background-color: $Background;  
     border-radius: 50px; 
+} 
 
-}
+

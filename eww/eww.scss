@@ -1,4 +1,4 @@
-*{
+*{ 
     all:unset;
     font-family: "Iosevka Nerd Font"
 } 
@@ -16,7 +16,28 @@
     padding: 5px;
     font-weight: bold;
     font-size: 17px;
+} 
+
+
+progressbar { 
+    padding: 5px;
+}    
+
+
+progressbar trough{
+    background-color: $Background-Alt;  
+    min-width: 40px; 
+    border-radius: 50px;
 }
+
+progressbar progress{
+    //background-color: $Lightblue;  
+    background: linear-gradient(to bottom, $Lightblue, $Blue);
+    min-width: 40px;  
+    border-radius: 50px;
+}
+
+
 
 /*
 .right_outer{
@@ -66,7 +87,7 @@
 	color: #73daca; 
 }
 
-*/
+
 scale trough {
     all:unset; 
     background-color: #232637;
@@ -146,3 +167,5 @@ scale trough highlight {
     margin: 0 2px 0 2px;
     background-color: #232637;
 }
+
+*/

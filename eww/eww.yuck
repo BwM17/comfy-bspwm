@@ -2,12 +2,11 @@
 (include "modules/bar.yuck")
 (include "modules/vars.yuck")
 (include "modules/misc.yuck")
-(include "modules/slider.yuck")
-(include "modules/graph.yuck")
 (include "modules/player.yuck") 
 (include "modules/windows.yuck")
 (include "modules/circular.yuck") 
 (include "modules/power.yuck")
+(include "modules/infoslider.yuck")
 
 
 
